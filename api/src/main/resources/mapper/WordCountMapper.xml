@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaokuang.api.mapper.WordCountMapper">
+
+    <resultMap id="BaseResultMap" type="com.xiaokuang.api.bean.WordCount">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="word" column="word" jdbcType="VARCHAR"/>
+            <result property="count" column="count" jdbcType="INTEGER"/>
+            <result property="submitter" column="submitter" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,word,count,
+        submitter
+    </sql>
+</mapper>
