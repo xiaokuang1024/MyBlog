@@ -56,6 +56,11 @@ public class Friends implements Serializable {
      */
     private Date time;
 
+    /**
+     * 可选颜色
+     */
+    private String color;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

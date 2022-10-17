@@ -11,10 +11,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Tags'
-}
+<script setup>
 </script>
 
 <style scoped>

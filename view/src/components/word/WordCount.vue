@@ -26,10 +26,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'WordCount'
-}
+<script setup>
 </script>
 
 <style scoped>

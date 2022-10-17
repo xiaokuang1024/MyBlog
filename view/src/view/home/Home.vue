@@ -2,11 +2,6 @@
   <BlogContent/>
 </template>
 
-<script>
+<script setup>
 import BlogContent from '@/components/blog/BlogContent.vue';
-
-export default {
-  name: "Home",
-  components: {BlogContent}
-}
 </script>

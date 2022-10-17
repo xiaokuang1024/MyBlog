@@ -54,8 +54,5 @@
 
 </template>
 
-<script>
-export default {
-  name: 'WordCount'
-}
+<script setup>
 </script>

@@ -22,54 +22,46 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Friends',
-  setup() {
-    const color = ['rgb(46, 204, 113)', 'rgb(46, 204, 113)', 'rgb(155, 89, 182)', 'rgb(230, 126, 34)', 'rgb(247, 159, 31)', 'rgb(52, 73, 94)']
-    const friend = [
-      {
-        img: require('../../assets/img/avatar.png'),
-        name: 'LMDKA',
-        description: '拥有伟大梦想的臭咸鱼',
-        color: color[Math.floor(Math.random() * 5)]
-      },
-      {
-        img: require('../../assets/img/avatar.png'),
-        name: 'LMDKA',
-        description: '拥有伟大梦想的臭咸鱼',
-        color: color[Math.floor(Math.random() * 5)]
-      },
-      {
-        img: require('../../assets/img/avatar.png'),
-        name: 'LMDKA',
-        description: '拥有伟大梦想的臭咸鱼',
-        color: color[Math.floor(Math.random() * 5)]
-      },
-      {
-        img: require('../../assets/img/avatar.png'),
-        name: 'LMDKA',
-        description: '拥有伟大梦想的臭咸鱼',
-        color: color[Math.floor(Math.random() * 5)]
-      },
-      {
-        img: require('../../assets/img/avatar.png'),
-        name: 'LMDKA',
-        description: '拥有伟大梦想的臭咸鱼',
-        color: color[Math.floor(Math.random() * 5)]
-      },
-      {
-        img: require('../../assets/img/avatar.png'),
-        name: 'LMDKA',
-        description: '拥有伟大梦想的臭咸鱼',
-        color: color[Math.floor(Math.random() * 5)]
-      },
-    ]
-    return {friend, color}
-  }
-}
+<script setup>
+const color = ['rgb(46, 204, 113)', 'rgb(46, 204, 113)', 'rgb(155, 89, 182)', 'rgb(230, 126, 34)', 'rgb(247, 159, 31)', 'rgb(52, 73, 94)']
+const friend = [
+  {
+    img: require('../../assets/img/avatar.png'),
+    name: 'LMDKA',
+    description: '拥有伟大梦想的臭咸鱼',
+    color: color[Math.floor(Math.random() * 5)]
+  },
+  {
+    img: require('../../assets/img/avatar.png'),
+    name: 'LMDKA',
+    description: '拥有伟大梦想的臭咸鱼',
+    color: color[Math.floor(Math.random() * 5)]
+  },
+  {
+    img: require('../../assets/img/avatar.png'),
+    name: 'LMDKA',
+    description: '拥有伟大梦想的臭咸鱼',
+    color: color[Math.floor(Math.random() * 5)]
+  },
+  {
+    img: require('../../assets/img/avatar.png'),
+    name: 'LMDKA',
+    description: '拥有伟大梦想的臭咸鱼',
+    color: color[Math.floor(Math.random() * 5)]
+  },
+  {
+    img: require('../../assets/img/avatar.png'),
+    name: 'LMDKA',
+    description: '拥有伟大梦想的臭咸鱼',
+    color: color[Math.floor(Math.random() * 5)]
+  },
+  {
+    img: require('../../assets/img/avatar.png'),
+    name: 'LMDKA',
+    description: '拥有伟大梦想的臭咸鱼',
+    color: color[Math.floor(Math.random() * 5)]
+  },
+]
+
+
 </script>
-
-<style>
-
-</style>

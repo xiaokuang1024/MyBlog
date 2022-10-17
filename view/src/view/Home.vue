@@ -11,9 +11,11 @@
     <div class="body">
       <div class="ui container">
         <div class="ui grid">
+          <!-- 中间主体 -->
           <div class="twelve wide column">
             <router-view/>
           </div>
+          <!-- 右侧内容 -->
           <div class="four wide column">
             <Introduction/>
             <WordCount v-if="$route.path!='/word'"/>
@@ -29,18 +31,13 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Nav from '@/components/home/Nav.vue';
 import Footer from '@/components/home/Footer.vue';
 import Introduction from '../components/info/Introduction.vue';
 import MyAPlayer from '@/components/home/MyAPlayer.vue';
 import Tags from '@/components/tag/Tags.vue';
 import WordCount from '@/components/word/WordCount.vue';
-
-export default {
-  name: "Home",
-  components: {Nav, Footer, Introduction, MyAPlayer, Tags, WordCount}
-}
 </script>
 
 <style scoped>

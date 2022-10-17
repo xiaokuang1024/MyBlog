@@ -13,11 +13,12 @@
             <result property="isPublished" column="is_published" jdbcType="INTEGER"/>
             <result property="counts" column="counts" jdbcType="INTEGER"/>
             <result property="time" column="time" jdbcType="TIMESTAMP"/>
+            <result property="color" column="color" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
         id,name,description,
         website,avatar,is_published,
-        counts,time
+        counts,time,color
     </sql>
 </mapper>

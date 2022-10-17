@@ -11,12 +11,5 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Comments'
-}
+<script setup>
 </script>
-
-<style scoped>
-
-</style>

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 /**
 * @author incredible
 * @description 针对表【friends】的数据库操作Service实现
-* @createDate 2022-10-16 23:09:27
+* @createDate 2022-10-17 19:03:52
 */
 @Service
 public class FriendsServiceImpl extends ServiceImpl<FriendsMapper, Friends>

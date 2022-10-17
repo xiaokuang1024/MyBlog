@@ -68,8 +68,8 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="WordCount" />
-                  <option name="tableName" value="word_count" />
+                  <option name="className" value="Friends" />
+                  <option name="tableName" value="friends" />
                 </TableUIInfo>
               </list>
             </option>

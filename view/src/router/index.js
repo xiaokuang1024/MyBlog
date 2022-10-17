@@ -18,8 +18,8 @@ const routes = [
                 component: () => import('@/view/category/Category.vue')
             },
             {
-                path: '/monents',
-                component: () => import('@/view/monents/Monents.vue')
+                path: '/moments',
+                component: () => import('@/view/moments/Moments.vue')
             },
             {
                 path: '/friends',

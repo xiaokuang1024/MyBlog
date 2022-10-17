@@ -13,7 +13,7 @@
         </router-link>
         <router-link to="/category" class="item" :class="{'active':$route.path==='/category'}">分类<i
             class="ui caret down icon"></i></router-link>
-        <router-link to="/monents" class="item" :class="{'active':$route.path==='/monents'}"><i
+        <router-link to="/moments" class="item" :class="{'active':$route.path==='/moments'}"><i
             class="ui cloud icon"></i>动态
         </router-link>
         <router-link to="/friends" class="item" :class="{'active':$route.path==='/friends'}"><i
@@ -34,18 +34,12 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Headers from './Headers.vue';
 
-export default {
-  name: "Nav",
-  components: {Headers},
-  setup() {
-    let headersIsShow = false
-    let logoIsShow = false
-    return {headersIsShow, logoIsShow}
-  }
-}
+let headersIsShow = false
+let logoIsShow = false
+
 </script>
 
 <style scoped>

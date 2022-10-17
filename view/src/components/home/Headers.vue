@@ -2,10 +2,7 @@
   <div class="header-image"></div>
 </template>
 
-<script>
-export default {
-  name: 'Headers'
-}
+<script setup>
 </script>
 
 <style scoped>

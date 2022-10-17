@@ -10,12 +10,5 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'BlogContent'
-}
+<script setup>
 </script>
-
-<style scoped>
-
-</style>

@@ -1,18 +1,22 @@
 <template>
   <div class="footers">
-    <h5 class="ui grey header">Blog</h5>
+    <h5 class="ui grey header">{{ text }}</h5>
     <div class="ui grey header">
-      <span>Copyright&ensp;©&ensp;2022&ensp;-&ensp;2022&ensp;</span>
-      <span>Blog&ensp;|&ensp;</span>
-      <a href="">备案号</a>
+      <span>{{ copyright }}&ensp;</span>
+      <span>{{ blogName }}&ensp;|&ensp;</span>
+      <a href="https://beian.miit.gov.cn/" target="_blank">{{ icp }}</a>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Footer'
-}
+<script setup>
+import store from "@/store";
+
+const setting = store.state.setting
+const copyright = setting.Copyright
+const blogName = setting.blogName
+const icp = setting.icp
+const text = setting.rollText
 </script>
 
 <style scoped>
