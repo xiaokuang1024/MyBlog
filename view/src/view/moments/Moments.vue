@@ -1,5 +1,9 @@
 <template>
   <!-- 我的动态 -->
+  <div class="ui segment">
+    <div style="text-align: center;font-size: 1.5rem;">我的动态</div>
+  </div>
+  <!-- 动态列表 -->
   <div class="ui feed large segment" v-for="item in momentList">
     <div class="event">
       <div class="label">

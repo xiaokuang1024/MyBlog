@@ -32,9 +32,14 @@ const routes = [
             {
                 path: '/word',
                 component: () => import('@/view/word/WordCount.vue')
-            }, {
+            },
+            {
                 path: '/tag',
                 component: () => import('@/view/tags/Tag.vue')
+            },
+            {
+                path: '/blog',
+                component: () => import('@/components/blog/BlogFullContent')
             }
         ]
     }

@@ -34,10 +34,10 @@
 <script setup>
 import Nav from '@/components/home/Nav.vue';
 import Footer from '@/components/home/Footer.vue';
-import Introduction from '../components/info/Introduction.vue';
+import Introduction from '../components/home/info/Introduction.vue';
 import MyAPlayer from '@/components/home/MyAPlayer.vue';
-import Tags from '@/components/tag/Tags.vue';
-import WordCount from '@/components/word/WordCount.vue';
+import Tags from '@/components/home/tag/Tags.vue';
+import WordCount from '@/components/home/word/WordCount.vue';
 </script>
 
 <style scoped>

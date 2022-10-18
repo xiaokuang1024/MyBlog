@@ -5,63 +5,30 @@
     </div>
     <div class="ui segment">
       <div class="ui cards three">
-        <a class="ui card" align="center" :style="{'background-color': i.color}" v-for="i in friend">
+        <a :href="friend.website" target="_blank" class="ui card" align="center"
+           :style="{'background-color': friend.color}"
+           v-for="friend in friends">
           <div class="content">
-            <img class="ui medium circular image" :src="i.img" style="width: 77px;height: 77px;"/>
+            <img class="ui medium circular image" :src="friend.avatar" style="width: 77px;height: 77px;"/>
           </div>
           <div class="content">
-            <div class="header">{{ i.name }}</div>
-            <div class="description">{{ i.description }}</div>
+            <div class="header">{{ friend.name }}</div>
+            <div class="description">{{ friend.description }}</div>
           </div>
         </a>
       </div>
     </div>
     <div class="ui segment">
-      ...
+      <Comments/>
     </div>
   </div>
 </template>
 
 <script setup>
-const color = ['rgb(46, 204, 113)', 'rgb(46, 204, 113)', 'rgb(155, 89, 182)', 'rgb(230, 126, 34)', 'rgb(247, 159, 31)', 'rgb(52, 73, 94)']
-const friend = [
-  {
-    img: require('../../assets/img/avatar.png'),
-    name: 'LMDKA',
-    description: '拥有伟大梦想的臭咸鱼',
-    color: color[Math.floor(Math.random() * 5)]
-  },
-  {
-    img: require('../../assets/img/avatar.png'),
-    name: 'LMDKA',
-    description: '拥有伟大梦想的臭咸鱼',
-    color: color[Math.floor(Math.random() * 5)]
-  },
-  {
-    img: require('../../assets/img/avatar.png'),
-    name: 'LMDKA',
-    description: '拥有伟大梦想的臭咸鱼',
-    color: color[Math.floor(Math.random() * 5)]
-  },
-  {
-    img: require('../../assets/img/avatar.png'),
-    name: 'LMDKA',
-    description: '拥有伟大梦想的臭咸鱼',
-    color: color[Math.floor(Math.random() * 5)]
-  },
-  {
-    img: require('../../assets/img/avatar.png'),
-    name: 'LMDKA',
-    description: '拥有伟大梦想的臭咸鱼',
-    color: color[Math.floor(Math.random() * 5)]
-  },
-  {
-    img: require('../../assets/img/avatar.png'),
-    name: 'LMDKA',
-    description: '拥有伟大梦想的臭咸鱼',
-    color: color[Math.floor(Math.random() * 5)]
-  },
-]
+import store from "@/store";
+import Comments from "@/components/comments/Comments"
+
+const friends = store.state.friends
 
 
 </script>

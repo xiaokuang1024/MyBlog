@@ -11,15 +11,16 @@
   background: url("../../assets/img/1.jpg") no-repeat;
   width: 100vw;
   background-size: cover;
-  animation: header 5s;
+  animation: header 2.5s;
+  height: 100vh;
 }
 
 @keyframes header {
   from {
-    height: 100vh;
+    height: 0vh;
   }
   to {
-    height: 0vh;
+    height: 100vh;
   }
 }
 </style>

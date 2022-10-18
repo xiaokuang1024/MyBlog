@@ -27,32 +27,26 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>1</td>
-          <td>积极的</td>
-          <td>11</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>热情的</td>
-          <td>103</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>向上的</td>
-          <td>111</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>自律的</td>
-          <td>520</td>
+        <tr v-for="word in WordCountList">
+          <td>{{ word.id }}</td>
+          <td>{{ word.word }}</td>
+          <td>{{ word.count }}</td>
         </tr>
         </tbody>
       </table>
     </div>
+
+    <div class="ui segment olive">
+      <Comments/>
+    </div>
+
   </div>
 
 </template>
 
 <script setup>
+import store from "@/store";
+import Comments from "@/components/comments/Comments";
+
+const WordCountList = store.state.WordCountList
 </script>
