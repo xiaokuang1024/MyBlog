@@ -25,10 +25,11 @@
 </template>
 
 <script setup>
-import store from "@/store";
 import Comments from "@/components/comments/Comments"
+import {useStore} from "vuex";
 
-const friends = store.state.friends
+let store = useStore()
+let friends = store.state.friends
 
 
 </script>

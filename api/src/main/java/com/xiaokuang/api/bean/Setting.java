@@ -36,7 +36,7 @@ public class Setting implements Serializable {
     private String value;
 
     /**
-     * 1基础设置2资料卡
+     * 1基础设置2资料卡3页面设置
      */
     private Integer type;
 

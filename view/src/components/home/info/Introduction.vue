@@ -7,7 +7,7 @@
       <!-- 名称显示 -->
       <h3 v-text="name"></h3>
       <!-- 彩色滚动字体 -->
-      <span v-text="rollText"></span>
+      <span id="rollText"></span>
     </div>
     <div class="content" align="center">
       <a :href="contactWay.github" target="_blank" class="ui circular icon button">
@@ -28,8 +28,14 @@
     </div>
     <!--  六边形数据  -->
     <el-collapse class="content" style="padding: 0 15px;width: 100%">
-      <el-collapse-item title="我的六边形数据">
+      <el-collapse-item title="六边形数据">
         <div ref="chart" style="height: 280px;width: 223px;"></div>
+      </el-collapse-item>
+      <el-collapse-item title="喜欢的动漫">
+        <div></div>
+      </el-collapse-item>
+      <el-collapse-item title="技术栈">
+        <div></div>
       </el-collapse-item>
     </el-collapse>
   </div>
@@ -37,16 +43,19 @@
 </template>
 
 <script setup>
-import store from "@/store";
 import * as echarts from 'echarts'
 import {ref} from "vue";
 import {onMounted} from "@vue/runtime-core";
+import Typed from 'typed.js'
+import {useStore} from "vuex";
 
-const setting = store.state.setting
-const avatar = setting.avatar
-const name = ref(setting.name)
-const rollText = ref(setting.rollText)
-const contactWay = ref({
+let store = useStore()
+
+let setting = store.state.setting
+let rollText = setting.rollText
+let avatar = ref(setting.avatar)
+let name = ref(setting.name)
+let contactWay = ref({
   github: setting.github,
   twitter: setting.twitter,
   telegram: setting.telegram,
@@ -54,8 +63,8 @@ const contactWay = ref({
   email: setting.email
 })
 let chart = ref()
-// console.log(chart)
 onMounted(() => {
+  // 六边形数据图表
   echarts.init(chart.value).setOption({
     radar: {
       indicator: [
@@ -84,6 +93,16 @@ onMounted(() => {
       }
     ]
   })
+
+
+  let dom = document.getElementById('rollText')
+  let option = {
+    strings: [rollText],
+    loop: false,
+    typeSpeed: 200
+  }
+  new Typed(dom, option)
+
 })
 
 </script>

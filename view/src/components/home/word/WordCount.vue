@@ -15,9 +15,12 @@
 </template>
 
 <script setup>
-import store from "@/store";
 
-const WordCountList = store.state.WordCountList
+import {useStore} from "vuex";
+
+let store = useStore()
+
+let WordCountList = store.state.wordCountList
 </script>
 
 <style scoped>

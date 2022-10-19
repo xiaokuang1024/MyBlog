@@ -10,13 +10,16 @@
 </template>
 
 <script setup>
-import store from "@/store";
 
-const setting = store.state.setting
-const copyright = setting.Copyright
-const blogName = setting.blogName
-const icp = setting.icp
-const text = setting.rollText
+import {useStore} from "vuex";
+
+let store = useStore()
+
+let setting = store.state.setting
+let copyright = setting.Copyright
+let blogName = setting.blogName
+let icp = setting.icp
+let text = setting.footerText
 </script>
 
 <style scoped>

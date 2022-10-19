@@ -68,8 +68,48 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
+                  <option name="className" value="About" />
+                  <option name="tableName" value="about" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Blog" />
+                  <option name="tableName" value="blog" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="BlogTag" />
+                  <option name="tableName" value="blog_tag" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Category" />
+                  <option name="tableName" value="category" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Comment" />
+                  <option name="tableName" value="comment" />
+                </TableUIInfo>
+                <TableUIInfo>
                   <option name="className" value="Friends" />
                   <option name="tableName" value="friends" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Moment" />
+                  <option name="tableName" value="moment" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Setting" />
+                  <option name="tableName" value="setting" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Tag" />
+                  <option name="tableName" value="tag" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="User" />
+                  <option name="tableName" value="user" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="WordCount" />
+                  <option name="tableName" value="word_count" />
                 </TableUIInfo>
               </list>
             </option>

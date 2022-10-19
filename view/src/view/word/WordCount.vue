@@ -27,10 +27,10 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="word in WordCountList">
-          <td>{{ word.id }}</td>
-          <td>{{ word.word }}</td>
-          <td>{{ word.count }}</td>
+        <tr v-for="item in WordCountList">
+          <td>{{ item.id }}</td>
+          <td>{{ item.word }}</td>
+          <td>{{ item.count }}</td>
         </tr>
         </tbody>
       </table>
@@ -45,8 +45,10 @@
 </template>
 
 <script setup>
-import store from "@/store";
 import Comments from "@/components/comments/Comments";
+import {useStore} from "vuex";
 
-const WordCountList = store.state.WordCountList
+let store = useStore()
+let WordCountList = store.state.wordCountList
+
 </script>

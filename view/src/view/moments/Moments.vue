@@ -25,8 +25,10 @@
 </template>
 
 <script setup>
-import store from "@/store";
+import {useStore} from "vuex";
 
-const avatar = store.state.setting.avatar
-const momentList = store.state.moment
+let store = useStore()
+let setting = store.state.setting
+let avatar = setting.avatar
+let momentList = store.state.moments
 </script>

@@ -13,8 +13,31 @@
         <div class="ui header item" @click="logoIsShow=!logoIsShow">Blog</div>
         <router-link to="/home" class="item" :class="{'active':$route.path==='/home'}"><i class="ui home icon"></i>首页
         </router-link>
-        <router-link to="/category" class="item" :class="{'active':$route.path==='/category'}">分类<i
-            class="ui caret down icon"></i></router-link>
+
+        <el-dropdown trigger="click">
+          <a class="item" :class="{'active':$route.path==='/category'}">
+            分类
+            <i class="ui caret down icon">
+              <arrow-down/>
+            </i>
+          </a>
+          <template #dropdown>
+            <el-dropdown-menu>
+              <el-dropdown-item>
+                <router-link to="/category">学习笔记</router-link>
+              </el-dropdown-item>
+              <el-dropdown-item>
+                <router-link to="/category">个人项目</router-link>
+              </el-dropdown-item>
+              <el-dropdown-item>
+                <router-link to="/category">技术杂烩</router-link>
+              </el-dropdown-item>
+              <el-dropdown-item>
+                <router-link to="/category">心情随写</router-link>
+              </el-dropdown-item>
+            </el-dropdown-menu>
+          </template>
+        </el-dropdown>
         <router-link to="/moments" class="item" :class="{'active':$route.path==='/moments'}"><i
             class="ui cloud icon"></i>动态
         </router-link>
@@ -39,10 +62,12 @@
 <script setup>
 import Headers from './Headers.vue';
 import {ref} from "vue";
-import store from "@/store";
+import {useStore} from "vuex";
 
-let headersIsShow = ref(store.state.setting.headersEnabled)
-let logoIsShow = ref(store.state.setting.logoEnabled)
+let store = useStore()
+
+let headersIsShow = ref(store.state.setting.headersIsShow)
+let logoIsShow = ref(store.state.setting.logoIsShow)
 
 </script>
 
